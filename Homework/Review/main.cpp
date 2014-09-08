@@ -33,6 +33,7 @@ int main(int argc, char** argv) {
         cout << stringAry[i] << endl;
     }
     //Q
+    //string newStr(stringAry,stringAry);
     QApplication app(argc, argv);
     QLabel *label = new QLabel(stringAry);
     label->show();

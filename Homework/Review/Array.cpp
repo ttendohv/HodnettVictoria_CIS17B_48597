@@ -56,7 +56,7 @@ void Array::setArray(int r,int c){
 }
 
 char* Array::toString(){
-    int size = (nRows * nCols * 2);
+    int size = (nRows * nCols * 3);
     char *stringAry = new char [size];
     int index = 0;
     ostringstream sstr;
@@ -67,6 +67,7 @@ char* Array::toString(){
             temp = sstr.str();
             stringAry[index++] = temp[0];
             stringAry[index++] = temp[1];
+            stringAry[index++] = " ";
             sstr.str("");
         }
     }

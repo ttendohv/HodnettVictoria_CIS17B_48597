@@ -9,6 +9,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <QApplication>
+#include <QLabel>
 using namespace std;
 
 //User-defined Libraries
@@ -25,6 +27,16 @@ int main(int argc, char** argv) {
     //Declare variables
     Array array(5,5);
     char* stringAry = array.toString();
+    //Output
+    cout << endl;
+    for(int i=0;i<50;i++){
+        cout << stringAry[i] << endl;
+    }
+    //Q
+    QApplication app(argc, argv);
+    QLabel *label = new QLabel(stringAry);
+    label->show();
+    return app.exec();
     //Exit
     delete []stringAry;
     return 0;

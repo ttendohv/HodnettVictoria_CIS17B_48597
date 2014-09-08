@@ -8,6 +8,10 @@
 #include "Array.h"
 #include <cstdlib>
 #include <ctime>
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
 
 Array::Array(){
     nRows = 0;
@@ -23,6 +27,8 @@ Array::Array(int x,int y){
     for(int i=0;i<x;i++){
         for(int j=0;j<y;j++){
             array[i][j] = rand()%90+10;
+            //Test array input
+            cout << array[i][j] << endl;
         }
     }
 }
@@ -50,10 +56,18 @@ void Array::setArray(int r,int c){
 }
 
 char* Array::toString(){
-    char *stringAry = new char [nRows * nCols];
+    int size = (nRows * nCols * 2);
+    char *stringAry = new char [size];
+    int index = 0;
+    ostringstream sstr;
+    string temp;
     for(int i=0;i<nRows;i++){
         for(int j=0;j<nCols;j++){
-            stringAry[i*nCols+j] = array[i][j];
+            sstr << array[i][j];
+            temp = sstr.str();
+            stringAry[index++] = temp[0];
+            stringAry[index++] = temp[1];
+            sstr.str("");
         }
     }
     return stringAry;

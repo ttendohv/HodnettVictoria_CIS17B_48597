@@ -20,9 +20,26 @@ using namespace std;
 //Execution Begins
 int main(int argc, char** argv) {
     //Declare variables
-    int size;
-    NumberArray(size);
-    
+    int size=10;
+    NumberArray numAry(size);
+    int input;
+    float num;
+    //Use functions
+    cout << "Enter in " << size << " floating-point numbers, pressing the "
+            "Enter key after each." << endl << endl;
+    for(int i=0;i<size;i++){
+        cin >> num;
+        numAry.storeElem(i,num);
+    }
+    cout << endl;
+    cout << "Enter in a number between 0 and " << size-1 << " to view any "
+            "element in the array. ";
+    cin >> input;
+    cout << "The number: " << numAry.getElem(input) << " is at location " << input
+            << " of this array." << endl;
+    cout << "The min of this array is " << numAry.getMin() << endl;
+    cout << "The max of this array is " << numAry.getMax() << endl;
+    cout << "The average of this array is " << numAry.getAverage() << endl;
     //Exit
     return 0;
 }

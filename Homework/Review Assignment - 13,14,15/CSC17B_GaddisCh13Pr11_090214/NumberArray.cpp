@@ -10,27 +10,11 @@
 NumberArray::NumberArray(int n){
     setSize(n);
     
-    array = new int[size];
+    array = new float[size];
     //Initialize
     for(int i=0;i<size;i++){
-        array[i] = -1;
+        array[i] = -1.0;
     }
-}
-    
-NumberArray::~NumberArray(){
-    delete [] array;
-}
-    
-void NumberArray::setSize(int n){
-    size = n;
-}
-    
-void NumberArray::storeElem(int n,float num){
-    array[n] = num;
-}
-    
-float NumberArray::getElem(int n){
-    return array[n];
 }
     
 float NumberArray::getMax(){

@@ -14,10 +14,18 @@ private:
     float *array;
 public:
     NumberArray(int);
-    ~NumberArray();
-    void setSize(int);
-    void storeElem(int,float);
-    float getElem(int);
+    ~NumberArray(){
+        delete [] array;
+    }
+    void setSize(int n){
+        size = n;
+    }
+    void storeElem(int n,float num){
+        array[n] = num;
+    }
+    float getElem(int n){
+        return array[n];
+    }
     float getMax();
     float getMin();
     float getAverage();

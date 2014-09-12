@@ -54,40 +54,75 @@ int main(int argc, char** argv) {
      * Create extra variables to properly demonstrate how prefix and postfix 
      * increment and decrement operators work.
      */
+    NumDays before(0);
     
     //Increment (and decrement) hours from each individual
     //Prefix increment
-    ++work1;
-    ++work2;
     cout << "Prefix: " << endl;
-    cout << "After incrementing, Worker 1-- " << work1.getHours() << " hours and "
-            << work1.getDays() << " days " << endl;
-    cout << "After incrementing, Worker 2-- " << work2.getHours() << " hours and "
-            << work2.getDays() << " days " << endl;
+    before=++work1;
+    cout << "Incremented Worker1 assigned to new variable:\n Hours: " << before.getHours()
+            << "\n Days: " << before.getDays() << endl;
+    cout << "Incremented Worker1:\n Hours: " << work1.getHours() << "\n Days: "
+            << work1.getDays() << endl;
+    
+    cout << endl;
+    cout << "Prefix: " << endl;
+    before=++work2;
+    cout << "Incremented Worker2 assigned to new variable:\n Hours: " << before.getHours()
+            << "\n Days: " << before.getDays() << endl;
+    cout << "Incremented Worker2:\n Hours: " << work2.getHours() << "\n Days: "
+            << work2.getDays() << endl;
+    
     //Prefix decrement
-    --work1;
-    --work2;
+    cout << endl;
     cout << "Prefix: " << endl;
-    cout << "After decrementing, Worker 1-- " << work1.getHours() << " hours and "
-            << work1.getDays() << " days " << endl;
-    cout << "After decrementing, Worker 2-- " << work2.getHours() << " hours and "
-            << work2.getDays() << " days " << endl;
+    before=--work1;
+    cout << "Decremented Worker1 assigned to new variable:\n Hours: " << before.getHours()
+            << "\n Days: " << before.getDays() << endl;
+    cout << "Decremented Worker1:\n Hours: " << work1.getHours() << "\n Days: "
+            << work1.getDays() << endl;    
+    
+    cout << endl;
+    cout << "Prefix: " << endl;
+    before=--work2;
+    cout << "Decremented Worker2 assigned to new variable:\n Hours: " << before.getHours()
+            << "\n Days: " << before.getDays() << endl;
+    cout << "Decremented Worker2:\n Hours: " << work2.getHours() << "\n Days: "
+            << work2.getDays() << endl;
+    
     //Postfix increment
-    work1++;
-    work2++;
+    cout << endl;
+    cout << "Postfix:" << endl;
+    before=work1++;
+    cout << "Incremented Worker1 assigned to new variable:\n Hours: " << before.getHours()
+            << "\n Days: " << before.getDays() << endl;
+    cout << "Incremented Worker1:\n Hours: " << work1.getHours() << "\n Days: "
+            << work1.getDays() << endl;    
+    
+    cout << endl;
     cout << "Postfix: " << endl;
-    cout << "After incrementing, Worker 1-- " << work1.getHours() << " hours and "
-            << work1.getDays() << " days " << endl;
-    cout << "After incrementing, Worker 2-- " << work2.getHours() << " hours and "
-            << work2.getDays() << " days " << endl;
+    before=work2++;
+    cout << "Incremented Worker2 assigned to new variable:\n Hours: " << before.getHours()
+            << "\n Days: " << before.getDays() << endl;
+    cout << "Incremented Worker2:\n Hours: " << work2.getHours() << "\n Days: "
+            << work2.getDays() << endl;
+    
     //Postfix decrement
-    work1--;
-    work2--;
-    cout << "Postfix: " << endl;
-    cout << "After decrementing, Worker 1-- " << work1.getHours() << " hours and "
-            << work1.getDays() << " days " << endl;
-    cout << "After decrementing, Worker 2-- " << work2.getHours() << " hours and "
-            << work2.getDays() << " days " << endl;
+    cout << endl;
+    cout << "Postfix:" << endl;
+    before=work1--;
+    cout << "Decremented Worker1 assigned to new variable:\n Hours: " << before.getHours()
+            << "\n Days: " << before.getDays() << endl;
+    cout << "Decremented Worker1:\n Hours: " << work1.getHours() << "\n Days: "
+            << work1.getDays() << endl;    
+    
+    cout << endl;
+    cout << "Postfix:" << endl;
+    before=work2--;
+    cout << "Decremented Worker2 assigned to new variable:\n Hours: " << before.getHours()
+            << "\n Days: " << before.getDays() << endl;
+    cout << "Decremented Worker2:\n Hours: " << work2.getHours() << "\n Days: "
+            << work2.getDays() << endl;
     return 0;
 }
 

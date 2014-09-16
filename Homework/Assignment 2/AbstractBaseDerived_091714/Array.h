@@ -7,6 +7,7 @@
 
 #ifndef ARRAY_H
 #define	ARRAY_H
+#include "abstrarray.h"
 
 class Array {
 private:
@@ -14,7 +15,6 @@ private:
     int nCols;
     int **array;
     char *strAry;
-    int strLength;
 public:
     Array();
     Array(int,int);
@@ -23,6 +23,9 @@ public:
     void setCols(int);
     void fill_array(int,int);
     char* toString();
+    char* getStrAry(){
+        return strAry;
+    }
 };
 
 #endif	/* ARRAY_H */

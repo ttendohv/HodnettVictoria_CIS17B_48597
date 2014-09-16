@@ -45,8 +45,8 @@ void Array::fill_array(int r,int c){
         array[i] = new int [c];
     }
     //Fill 2-D Array
-    for(int i=0;i<x;i++){
-        for(int j=0;j<y;j++){
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
             array[i][j] = rand()%90+10;
             //Test array input
             //cout << array[i][j] << endl;
@@ -72,7 +72,6 @@ char* Array::toString(){
     }
     stringAry[index]='\0';
     strAry=stringAry;
-    strLength=strlen(stringAry);
     return stringAry;
 }
 

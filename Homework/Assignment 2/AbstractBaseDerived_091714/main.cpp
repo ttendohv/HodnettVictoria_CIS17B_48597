@@ -14,7 +14,7 @@
 using namespace std;
 
 //User-defined Libraries
-#include "Array.h"
+#include "ArrayString.h"
 
 //Global Constants
 
@@ -26,20 +26,20 @@ int main(int argc, char** argv) {
     srand(static_cast<int>(time(0)));
 
     //Declare variables
-    Array array(5,5);//Array with 5 rows and 5 cols
+    ArrayString array(5,5);//Array with 5 rows and 5 cols
     char* stringAry = array.toString();//convert array of numbers to a string
-
+    array.toPrint(argc,argv);
     //Output-test
     //cout << endl;
     //for(int i=0;i<strlen(stringAry);i++){
     //    cout << stringAry[i] << endl;
     //}
 
-    //Q
-    QApplication app(argc, argv);
-    QLabel *label = new QLabel(stringAry);
-    label->show();
-    return app.exec();
+    ////Q
+    //QApplication app(argc, argv);
+    //QLabel *label = new QLabel(stringAry);
+    //label->show();
+    //return app.exec();
 
     //Exit
     delete []stringAry;

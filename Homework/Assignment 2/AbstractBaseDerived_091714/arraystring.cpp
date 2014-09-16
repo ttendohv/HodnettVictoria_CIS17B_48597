@@ -10,4 +10,6 @@ int ArrayString::toPrint(int a, char** b){
     QLabel *label = new QLabel(array);
     label->show();
     return app.exec();
+    delete []array;
+    delete []label;
 }
